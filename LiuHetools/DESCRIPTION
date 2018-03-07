@@ -1,0 +1,17 @@
+Package: LiuHetools
+Title: LiuHetools
+Version: 0.0.0.9000
+Authors@R: person("He", "Liu", email = "liux3552@umn.edu", role = c("aut", "cre"))
+Description: This is my first package!
+Depends:
+    R (>= 3.4.3)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown,
+    testthat
+Imports: dplyr,
+    ggplot2
+VignetteBuilder: knitr

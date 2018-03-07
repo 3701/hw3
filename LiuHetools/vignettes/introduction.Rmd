@@ -1,0 +1,58 @@
+---
+title: "hggplot"
+author: "liux3552"
+date: "`3/4`"
+
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+library(LiuHetools)
+library(tidyverse)
+
+ggplot(x,aes(x=x1,y=x2))+geom_line()
+ggplot(x,aes(x=x1,y=x2))+geom_point()
+ggplot(x,aes(x=x1,y=x2))+geom_area()
+
+#fquiz11 here calculate the mean, var, sd of data "quiz12" from package; fquiz11 serves the same function, but with GIEMO
+fquiz11(quiz12)
+fquiz12(quiz12)
+
+#fquiz13 here finds the maximum likelihood value of data "quiz13" from package
+fquiz13(quiz13)
+
+#fhw14 here calculate the population mean and sigma^2 of data "hw14" from package, the first variable is numeric vector of 
+#data value, the second variable is probability vector corresponding to the data (sum to 1); fhw15 serves the same function,
+# but with GIEMO
+
+fhw14(hw14$x,hw14$p)
+fhw15(hw14$x,hw14$p)
+
+#fquiz21 calculate value of $x^T A^{-1} x$; where x is vector and a is matrix. 
+fquiz21(quiz21a,quiz21x)
+
+#fquiz22 calculates value of $x^T A^{-1} x$; it invokes like "a%fquiz22%x"
+quiz21a%fquiz22%quiz21x
+
+
+#fquiz23 takes a numeric matrix (quiz23 from the package here) and standardizes its columns
+fquiz23(quiz23)
+
+#fhw25 takes works like apply() in standard R functions. Here uses quiz25 from package as example
+#row mean of hw25
+fhw25(hw25,1,"mean")
+
+#column mean of hw25
+fhw25(hw25,2,"mean")
+
+#fhw26 calculates medians of 3 2D margins and 3 1d margins of giving 3by3by3 matrix (hw26 in the package here)
+fhw26(hw26)
+
+
+
+```
+
